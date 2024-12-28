@@ -10,7 +10,7 @@ function Navigation() {
 
   const styles = {
     navbar: {
-      backgroundColor: "#0073e6",
+      backgroundColor: "#333333", // Darker background
       padding: "1rem",
       display: "flex",
       justifyContent: "center",
@@ -29,7 +29,7 @@ function Navigation() {
       margin: "0 1rem",
     },
     navLink: {
-      color: "#fff",
+      color: "#f1f1f1", // Lighter text color
       fontSize: "1rem",
       fontWeight: "bold",
       textTransform: "uppercase",
@@ -39,11 +39,12 @@ function Navigation() {
       transition: "all 0.3s ease",
     },
     activeLink: {
-      color: "#ffcc00",
-      borderBottom: "2px solid #ffcc00",
+      color: "#ffcc00", // Highlighted active link color
+      borderBottom: "2px solid #ffcc00", // Active link border
     },
     navLinkHover: {
       textDecoration: "underline",
+      color: "#ffcc00", // Hover color
     },
     toggler: {
       display: "none",
@@ -66,6 +67,8 @@ function Navigation() {
               ...(activeLink === "/" ? styles.activeLink : {}),
             }}
             onClick={() => handleLinkClick("/")}
+            onMouseEnter={(e) => (e.target.style.color = styles.navLinkHover.color)} // Hover effect
+            onMouseLeave={(e) => (e.target.style.color = styles.navLink.color)} // Reset color
           >
             Login
           </Link>
@@ -78,6 +81,8 @@ function Navigation() {
               ...(activeLink === "/giftcard" ? styles.activeLink : {}),
             }}
             onClick={() => handleLinkClick("/giftcard")}
+            onMouseEnter={(e) => (e.target.style.color = styles.navLinkHover.color)} 
+            onMouseLeave={(e) => (e.target.style.color = styles.navLink.color)}
           >
             SwapCard
           </Link>
@@ -90,6 +95,8 @@ function Navigation() {
               ...(activeLink === "/alluserdetails" ? styles.activeLink : {}),
             }}
             onClick={() => handleLinkClick("/alluserdetails")}
+            onMouseEnter={(e) => (e.target.style.color = styles.navLinkHover.color)} 
+            onMouseLeave={(e) => (e.target.style.color = styles.navLink.color)}
           >
             All User Data
           </Link>
@@ -102,6 +109,8 @@ function Navigation() {
               ...(activeLink === "/alltransactions" ? styles.activeLink : {}),
             }}
             onClick={() => handleLinkClick("/alltransactions")}
+            onMouseEnter={(e) => (e.target.style.color = styles.navLinkHover.color)} 
+            onMouseLeave={(e) => (e.target.style.color = styles.navLink.color)}
           >
             Transactions
           </Link>
@@ -114,6 +123,8 @@ function Navigation() {
               ...(activeLink === "/singletransaction" ? styles.activeLink : {}),
             }}
             onClick={() => handleLinkClick("/singletransaction")}
+            onMouseEnter={(e) => (e.target.style.color = styles.navLinkHover.color)} 
+            onMouseLeave={(e) => (e.target.style.color = styles.navLink.color)}
           >
             Single Transaction
           </Link>
@@ -126,6 +137,8 @@ function Navigation() {
               ...(activeLink === "/dashboard" ? styles.activeLink : {}),
             }}
             onClick={() => handleLinkClick("/dashboard")}
+            onMouseEnter={(e) => (e.target.style.color = styles.navLinkHover.color)} 
+            onMouseLeave={(e) => (e.target.style.color = styles.navLink.color)}
           >
             Logout
           </Link>
